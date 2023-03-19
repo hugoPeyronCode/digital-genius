@@ -11,7 +11,9 @@ import SwiftUI
 struct Digital_GeniusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+            }
         }
     }
 }
