@@ -6,11 +6,19 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
-struct User: Identifiable {
-    let id = UUID()
+struct User: Identifiable, Codable {
+    var id = UUID()
     let username: String
     let email: String
     let password: String
-    let progess: [UUID: Float]
+    
+    
+    init (username: String, email: String, password: String){
+        self.username = username
+        self.email = email
+        self.password = password
+    }
+    
 }
